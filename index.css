@@ -1,0 +1,2309 @@
+/* Afacad Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+/* Abel Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Poppins Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+/* Inria serif Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* Universal Selector */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Variables */
+:root {
+    --color: #FFFFFF;
+    --font: "Afacad", sans-serif;
+}
+
+/* Overall Container */
+.container {
+    min-height: auto;
+    background-color: #000000;
+}
+
+/***************************************** Navigation Bar ***************************************/
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 120px 40px 60px;
+    color: var(--color);
+    /* background-color:blue; */
+    font-family: var(--font);
+}
+
+nav p {
+    font-size: 65px;
+}
+
+/* Span tag for  ortfolio */
+nav span {
+    font-size: 50px;
+}
+
+/* label */
+nav label {
+    display: none;
+}
+
+/* Menu bar */
+label .menu {
+    color: var(--color);
+    font-size: 25px;
+}
+
+/* input checkbox */
+nav input {
+    display: none;
+}
+
+input:checked+.anchor {
+    left: 0px;
+}
+
+/* Overall Anchor tag */
+nav .anchor {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 25px;
+    transition: all 1s;
+}
+
+.anchor a {
+    text-decoration: none;
+    color: var(--color);
+    transition: all 1s;
+    position: relative;
+    padding: 5px 12px;
+}
+
+/* hover effect for before */
+.anchor a::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    content: "";
+    height: 0%;
+    width: 0%;
+    border: 0px;
+    background-color: transparent;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    transition: all 1s;
+}
+
+.anchor a:hover::before {
+    height: 96%;
+    width: 97%;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+/* hover effect for after */
+.anchor a::after {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    content: "";
+    height: 0%;
+    width: 0%;
+    border: 0;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: all 1s;
+}
+
+.anchor a:hover::after {
+    height: 96%;
+    width: 97%;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+/* Contact Button */
+nav .nav-btn {
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn button {
+    font-family: var(--font);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.33) 20.34%, rgba(255, 255, 255, 0.33) 114.41%);
+    border: 0.91px solid #FFF9F9;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 5px rgb(85, 83, 83), 0 6px 20px 5px rgb(87, 83, 83);
+    color: var(--color);
+    font-size: 27px;
+    border-radius: 30px;
+    padding: 10px 50px 0px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+/******************************************* Home Section **************************************/
+.home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 120px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+    /* background-color:brown; */
+}
+
+/* Developer Name and Role */
+.txt {
+    position: static;
+    color: var(--color);
+    font-family: var(--font);
+}
+
+/* Developer Name */
+.txt .name {
+    font-size: 40px;
+}
+
+/* Role */
+.txt .role {
+    font-size: 80px;
+}
+
+/* Role Description */
+.home .para {
+    font-family: "Abel", sans-serif;
+    font-size: 25px;
+    line-height: 40px;
+    width: 100%;
+    max-width: 573px;
+    color: grey;
+    position: static;
+    margin-top: 20px;
+}
+
+/********************** Home Button **************************/
+.c-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #3DD2D2;
+    color: var(--color);
+    border: none;
+    border-radius: 30px;
+    padding: 11px;
+    cursor: pointer;
+    font-size: 19px;
+    font-family: "Poppins", sans-serif;
+    height: 57px;
+    width: 136px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+/* Home button kulla iruka arrow */
+.arrow {
+    background-color: var(--color);
+    color: #3DD2D2;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+.home input {
+    display: none;
+}
+
+#contactCheck:checked+.c-button {
+    justify-content: center;
+    /* gap: 0px; */
+}
+
+/* Animation for Contact button and arrow */
+#contactCheck:checked+.c-button .arrow {
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+        width: 34px;
+        height: 34px;
+    }
+
+    50% {
+        transform: translateX(-82px);
+        opacity: 1;
+        width: 34px;
+        height: 34px;
+    }
+
+    80% {
+        transform: translateX(0);
+        opacity: 1;
+        width: 34px;
+        height: 34px;
+    }
+
+    100% {
+        transform: translateX(20px);
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Animation for contact button and contact text */
+#contactCheck:checked+.c-button .c-text {
+    animation-name: btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* my image */
+.myimage {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    height: 424px;
+    width: 335px;
+    z-index: 1;
+}
+
+/* rotate img */
+.home .rotate {
+    width: 499px;
+    height: 489px;
+    transform: rotateX(-0.87deg)rotateZ(-37deg);
+    opacity: 0.9;
+    position: absolute;
+    top: 30px;
+    right: -302px;
+}
+
+/**************************************** About Section *****************************************/
+.about {
+    min-height: 100vh;
+    padding: 10px 120px;
+    /* background-color: blueviolet; */
+    position: relative;
+}
+
+.about-title {
+    font-family: var(--font);
+    color: var(--color);
+    font-size: 50px;
+    border-bottom: 1px dashed var(--color);
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    padding-bottom: 5px;
+}
+
+/********************************************* Cube **********************************************/
+/******** Top Cube ********/
+.about .topcube {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+/********** Overall Cube *********/
+.overallcube {
+    perspective: 1000px;
+    position: absolute;
+    left: 15%;
+    top: 32%;
+    z-index: 2;
+}
+
+.face {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    transform-style: preserve-3d;
+    animation: cube 6s infinite linear;
+}
+
+@keyframes cube {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* side for overall individual boxes */
+.side {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    background: black;
+    box-sizing: border-box;
+}
+
+/* box for every individual boxes */
+.box {
+    border: 2px solid white;
+    background: transparent;
+}
+
+/************** Rotate 3D ************/
+.top {
+    transform: rotateX(90deg) translateZ(90px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(90px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(90px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(90px);
+}
+
+.back {
+    transform: rotateX(-180deg) translateZ(90px);
+}
+
+.front {
+    transform: rotateX(0deg) translateZ(90px);
+}
+
+/************** Bottom Cube **************/
+.about .bottomcube {
+    position: absolute;
+    bottom: -5%;
+    left: 35%;
+}
+
+.about-wrapper {
+    display: flex;
+}
+
+.about-left {
+    width: 45%;
+    position: relative;
+    height: 80vh;
+}
+
+.about-right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.goms {
+    font-family: "Abel", sans-serif;
+    font-size: 80px;
+    margin-top: 50px;
+}
+
+.goms span {
+    font-weight: 400;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 6px var(--color);
+    paint-order: stroke fill;
+    display: inline-block;
+    opacity: 0;
+    animation: letter 0.1s forwards;
+    transform: translateX(50px);
+}
+
+@keyframes letter {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.goms span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.goms span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.goms span:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.goms span:nth-child(4) {
+    animation-delay: 1s;
+}
+
+.goms span:nth-child(5) {
+    animation-delay: 1.4s;
+}
+
+.goms span:nth-child(6) {
+    animation-delay: 1.7s;
+}
+
+.goms span:nth-child(7) {
+    animation-delay: 2s;
+}
+
+.about .about-para {
+    font-family: "Abel", sans-serif;
+    color: #C4C0C0;
+    font-size: 30px;
+    line-height: 45px;
+    width: 100%;
+    max-width: 600px;
+    margin: 60px 0 30px 30px;
+    position: relative;
+}
+
+.about .about-para::before {
+    content: "";
+    position: absolute;
+    left: -60px;
+    top: -40px;
+    width: 55px;
+    height: 55px;
+    background: url("symbol.jpeg") no-repeat;
+    background-size: contain;
+}
+
+.about .about-para::after {
+    content: "";
+    position: absolute;
+    right: 60px;
+    bottom: -40px;
+    width: 55px;
+    height: 55px;
+    background: url("symbol.jpeg") no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+}
+
+/*************************************** Skills Section **********************************/
+.skills {
+    height: auto;
+    padding-bottom: 40px;
+    /* background-color: #3DD2D2; */
+}
+
+.skills-title {
+    font-family: var(--font);
+    color: var(--color);
+    font-size: 50px;
+    border-bottom: 1px dashed var(--color);
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+
+.overall-skills {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 236px);
+    row-gap: 60px;
+    column-gap: 120px;
+    margin: 120px auto 40px auto;
+    width: 100%;
+}
+
+.skill-box {
+    height: 356px;
+    width: 236px;
+    border: 2px solid #a7a3a3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.skill-box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 48px;
+    height: 48px;
+    background-color: #D9D9D947;
+    border-radius: 0px 8px 0px 50px;
+    z-index: 1;
+}
+
+.skill-box .html {
+    height: 96px;
+    width: 85px;
+}
+
+.skill-box .css {
+    height: 96px;
+    width: 85px;
+}
+
+.skill-box .js {
+    height: 96px;
+    width: 85px;
+}
+
+.skill-box .react {
+    height: 92px;
+    width: 78px;
+}
+
+.skill-box .node {
+    height: 119px;
+    width: 100px;
+}
+
+.skill-box .mongo {
+    height: 115px;
+    width: 97px;
+}
+
+.skill-box .skill-num {
+    position: absolute;
+    font-weight: 400;
+    font-size: 155px;
+    font-family: var(--font);
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 4px var(--color);
+    paint-order: stroke fill;
+    left: -40px;
+    height: 126px;
+    width: 81px;
+    background-color: black;
+    /* background-color: #3678C5; */
+    display: flex;
+    align-items: center;
+}
+
+.skill-box:nth-child(1) .skill-num {
+    left: -54px;
+}
+
+.skill-box:nth-child(4) .skill-num {
+    left: -49px;
+}
+
+.hidebox {
+    position: absolute;
+    background-color: black;
+    /* background-color: pink; */
+}
+
+.skill-box .dot {
+    position: absolute;
+    font-size: 80px;
+    color: var(--color);
+}
+
+/************** Skill box 1 **************/
+.skill-box:nth-child(1) .hidebox {
+    left: -40px;
+    bottom: 119px;
+    height: 18px;
+    width: 59px;
+}
+
+.skill-box:nth-child(1) .dot {
+    left: -25px;
+    top: 150px;
+}
+
+/*************** Skill box 2 *************/
+.skill-box:nth-child(2) .hidebox {
+    left: -68px;
+    bottom: 120px;
+    height: 13px;
+    width: 67px;
+}
+
+.skill-box:nth-child(2) .dot {
+    left: -32px;
+    top: 150px;
+}
+
+/************* Skill box 3 **************/
+.skill-box:nth-child(3) .hidebox {
+    left: -26px;
+    bottom: 119px;
+    height: 9px;
+    width: 24px;
+}
+
+.skill-box:nth-child(3) .dot {
+    left: -34px;
+    top: 154px;
+}
+
+/*************** Skill box 4 **************/
+.skill-box:nth-child(4) .hidebox {
+    left: -3px;
+    bottom: 121px;
+    height: 4px;
+    width: 11px;
+}
+
+.skill-box:nth-child(4) .dot {
+    left: 3px;
+    top: 161px;
+}
+
+/***************** Skill box 5 **************/
+.skill-box:nth-child(5) .hidebox {
+    left: -31px;
+    bottom: 119px;
+    height: 14px;
+    width: 31px;
+}
+
+.skill-box:nth-child(5) .dot {
+    left: -37px;
+    top: 153px;
+}
+
+/****************** Skill box 6 ******************/
+.skill-box:nth-child(6) .hidebox {
+    left: -37px;
+    bottom: 113px;
+    height: 16px;
+    width: 35px;
+}
+
+.skill-box:nth-child(6) .dot {
+    left: -29px;
+    top: 157px;
+}
+
+.skill-button {
+    position: absolute;
+    bottom: 25px;
+    font-family: "Inria Serif", serif;
+    background-color: #3E4070;
+    color: #E4E4E4;
+    border: 1px solid white;
+    padding: 7px 20px;
+    border-radius: 25px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    background-size: 200% 100%;
+
+}
+
+.skill-button:hover {
+    background: linear-gradient(90deg, #3E4070 0%, #a45ae9 50%, #3E4070 100%);
+    box-shadow: 0 0 15px rgba(191, 139, 250, 0.6), 0 0 30px rgba(195, 144, 253, 0.4);
+    /* box-shadow: 0 0 15px rgba(167, 139, 250, 0.8), 0 0 35px rgba(164, 90, 233, 0.6); */
+    font-size: 16px;
+    animation: gradient 1.5s linear infinite;
+    background-size: 200% 100%;
+    background-position: 0% 50%;
+    transform: scale(1.25);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.skill-box:nth-child(1) .skill-button {
+    padding: 7px 30px;
+}
+
+.skill-box:nth-child(2) .skill-button {
+    padding: 7px 40px;
+}
+
+.skill-button i {
+    color: #E4E4E4;
+    font-size: 17px;
+}
+
+/**************************************** Education Section *****************************************/
+.education {
+    height: 100vh;
+    padding: 30px 0 80px;
+}
+
+/* Education Title */
+.edu-title {
+    color: white;
+    font-family: var(--font);
+    font-size: 50px;
+    border-bottom: 1px dashed white;
+    width: fit-content;
+    margin: 0 auto 120px;
+}
+
+/* Overall Education  */
+.overall-edu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Education circle */
+.edu-circle {
+    text-align: center;
+}
+
+/* School and College Academic */
+.edu-circle p {
+    color: white;
+    font-family: var(--font);
+    font-size: 40px;
+    margin-top: 70px;
+}
+
+/* Individual Circle */
+.circle {
+    width: 213px;
+    height: 213px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: var(--font);
+    font-size: 50px;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    background: black;
+    border-radius: 50%;
+}
+
+.circle span {
+    z-index: 2;
+    transform: rotate(-90deg);
+}
+
+/* Conic Gradient */
+.circle-10th {
+    background: conic-gradient(from 0deg, white 100%, black 0);
+}
+
+.circle-12th {
+    background: conic-gradient(from 0deg, white 74%, black 0);
+}
+
+.circle-clg {
+    background: conic-gradient(from 0deg, white 75%, black 0);
+}
+
+/************************************* Contact Section **********************************/
+.contact-section {
+    min-height: 100vh;
+    padding-bottom: 150px;
+}
+
+/* Contact Title */
+.contact-title {
+    font-family: var(--font);
+    color: var(--color);
+    font-size: 50px;
+    border-bottom: 1px dashed var(--color);
+    width: fit-content;
+    margin: 0 auto 60px auto;
+    padding-top: 50px;
+}
+
+/* Overall Contact */
+.overall-contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
+    padding: 0 120px;
+}
+
+/* Individual Contact */
+.individual-contact {
+    width: 285px;
+    height: 285px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+}
+
+/* icon and hand outline */
+.outline {
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Social media icons */
+.outline i {
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 10px;
+    animation-name:icon ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes icon{
+    0% {
+    transform: translateY(0px);
+}
+50%{
+    transform: translateY(10px);
+} 
+100%{
+    transform: translateY(0px);
+}
+
+}
+/* hand image */
+.outline img {
+    position: absolute;
+    bottom: 60px;
+    width: 91px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Gradient for Rounds */
+.round1 {
+    background: linear-gradient(180deg, #000000 65.57%, #2C7CB2 100%);
+}
+
+.round2 {
+    background: linear-gradient(180deg, #000000 65.57%, #A0B22C 100%);
+}
+
+.round3 {
+    background: linear-gradient(180deg, #000000 65.57%, #25D3C8 100%);
+}
+
+.round4 {
+    background: linear-gradient(180deg, #000000 65.57%, #409327 100%);
+}
+
+.round5 {
+    background: linear-gradient(180deg, #000000 65.57%, #892793 100%);
+}
+
+.round6 {
+    background: linear-gradient(180deg, #000000 65.57%, #3678C5 100%);
+}
+
+/* Gradient for outlines */
+.round1 .outline {
+    background: linear-gradient(179.8deg, #090909 42.21%, #306B98 84.03%, #3CABEF 99.82%);
+}
+
+.round2 .outline {
+    background: linear-gradient(179.8deg, #090909 42.21%, #687132 84.03%, #C7EF16 99.82%);
+}
+
+.round3 .outline {
+    background: linear-gradient(179.8deg, #090909 42.21%, #76B7B8 84.03%, #338A77 99.82%);
+}
+
+.round4 .outline {
+    background: linear-gradient(179.8deg, #090909 42.21%, #398E4E 84.03%, #31E23F 99.82%);
+}
+
+.round5 .outline {
+    background: linear-gradient(179.8deg, #090909 42.21%, #AF30BB 84.03%, #BF3B95 99.82%);
+}
+
+.round6 .outline {
+    background: linear-gradient(179.8deg, #090909 42.21%, #304098 84.03%, #3CABEF 99.82%);
+}
+
+/**************************** Project Section ****************************/
+.project-sec{
+    min-height: 100vh;
+    padding: 30px 100px 80px;
+    /* background-color: #0f2f3f; */
+}
+
+.project-title{
+    font-family: var(--font);
+    color: var(--color);
+    font-size: 50px;
+    border-bottom: 1px dashed var(--color);
+    width: fit-content;
+    margin: 0 auto 100px auto;
+    padding-top: 50px;
+}
+
+.overall-projects{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 100px;
+}
+.projects{
+    display: flex;
+    align-items: center;
+    gap:20%;
+    /* justify-content: space-between; */
+}
+
+.p1{
+    position: relative;
+width: 300px;
+top:20%;
+    height: 250px;
+    background-color:white;
+    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
+}
+.p2{
+width: 300px;
+position: relative;
+    height: 250px;
+    top:20%;
+    background-color: white;
+    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
+}
+.p3{
+    width: 300px;
+    position: relative;
+    height: 250px;
+    top:20%;
+    background-color: white;
+    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
+}
+.path-2{
+    position: relative;
+     width: 300px;
+    height: 250px;
+    background-color:  #283349;
+    /* background: linear-gradient(169.98deg, #7397DF 90%, rgba(57, 60, 68, 0.015) 81.2%); */
+    bottom:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
+}
+
+.clip-position{
+    position: relative;
+    /* background-color:#AF30BB; */
+    height: 400px;
+    
+}
+.clip-position:hover  .path-2{
+   background-color:  #353F54;
+   bottom:70%;
+   transition: all 1s;
+}
+.clip-position:hover  .p1{
+   background-color: #353F54;
+   top:40%;
+    transition: all 1s;
+   
+}
+.clip-position:hover  .p2{
+   background-color: #353F54;
+   top:50%;
+    transition: all 1s;
+}
+.clip-position:hover  .p3{
+   background-color: #353F54;
+   top:50%;
+    transition: all 1s;
+   
+}
+.clip-position:hover .p1,
+.clip-position:hover .p2,
+.clip-position:hover .p3{
+   top: 30%;
+   background-color: #1a2e40;
+}
+.p1, .p2, .p3{
+    position: relative;
+    top: 20%;
+    transition: top 0.8s ease, background-color 0.8s ease;
+}
+.path-2{
+    bottom: 50%;
+        transition: bottom 0.8s ease, background-color 0.8s ease;
+        position: relative;
+}
+.path-2 p{
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+}
+.project-info{
+    color: white;
+    font-family: var(--font);
+}
+
+.project-info h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: roboto;
+}
+
+.project-desc{
+    font-family: "Abel", sans-serif;
+    font-size: 20px;
+    line-height: 31px;
+    margin-bottom: 25px;
+}
+
+.project-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #D9D9D9;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 31px;
+}
+
+/**********************************Tablet and Mobile Responsive *********************************/
+
+@media only screen and (min-width:300px) and (max-width:900px) {
+    
+/****************************** Tab and Mobile Navigation Bar ***************************/
+    nav {
+        align-items: center;
+    }
+
+    nav .anchor {
+        position: fixed;
+        background-color: black;
+        left: -100%;
+        top: 65px;
+        width: 100%;
+        height: 90vh;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 10;
+    }
+
+    nav label {
+        display: flex;
+        align-items: center;
+    }
+
+    label .menu {
+        position: static;
+    }
+
+    nav .nav-btn {
+        display: none;
+    }
+/********************************* Tab and Mobile Home Section ****************************/
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: visible;
+        min-height: auto;
+    }
+
+    /* Developer Name and Role */
+    .txt {
+        display: contents;
+    }
+
+    /* Developer Name */
+    .txt .name {
+        order: 1;
+        width: 100%;
+    }
+
+    /* Role */
+    .txt .role {
+        order: 2;
+        width: 100%;
+    }
+
+    /* my image */
+    .myimage {
+        position: static;
+        order: 3;
+    }
+
+    /* Role Description */
+    .home .para {
+        width: 100%;
+        color: var(--color);
+        order: 4;
+    }
+
+    .c-button {
+        order: 5;
+    }
+
+    /* rotate img */
+    .home .rotate {
+        display: none;
+    }
+/**************************** Tab and Mobile About Section **************************/
+    /* About Section */
+    .about {
+        overflow: hidden;
+    }
+
+    /* About Wrapper */
+    .about-wrapper {
+        flex-direction: column;
+    }
+
+    /*************** Cube Area ***************/
+    /** Left Content **/
+    .about-left {
+        width: 100%;
+    }
+
+    /* Top Cube */
+    .about .topcube {
+        transform: rotateZ(-80deg);
+    }
+
+    /* Main Rotating Cube */
+    .overallcube {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .box {
+        border: 1px solid white;
+    }
+
+    /* Bottom Cube */
+    .about .bottomcube {
+        left: auto;
+        right: 0px;
+        transform: rotate(-70deg);
+    }
+
+    /** Right Content **/
+    .about-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    /* About Paragraph */
+    .about .about-para {
+        color: var(--color);
+    }
+}
+
+/******************************************** Mobile Responsive **************************************/
+
+@media only screen and (min-width:300px) and (max-width:600px) {
+
+/************************************ Mobile Navigation Bar ************************************/
+    nav {
+        padding: 20px 30px;
+    }
+
+    nav p {
+        font-size: 25px
+    }
+
+    nav span {
+        font-size: 25px;
+    }
+
+    nav .anchor {
+        gap: 30px;
+    }
+
+    label .menu {
+        position: static;
+    }
+/**************************************** Mobile Home Section ***********************************/
+    .home {
+        padding: 30px 30px;
+    }
+
+    /* Role */
+    .txt .role {
+        font-size: 60px;
+        line-height: 50px;
+    }
+
+    /* my image */
+    .myimage {
+        height: 270px;
+        width: 214px;
+        margin: 20px auto 0px;
+    }
+
+    /* Role Description */
+    .home .para {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+/*********************************** Mobile About SEction **********************************/
+    /* About Section */
+    .about {
+        padding: 10px 20px;
+    }
+
+    /* About Title */
+    .about-title {
+        font-size: 30px;
+    }
+
+    /*************** Cube Area ***************/
+    /** Left Content **/
+    .about-left {
+        height: 250px;
+    }
+
+    /* Top Cube */
+    .about .topcube {
+        top: 65px;
+        left: 0px;
+        width: 65px;
+    }
+
+    /* Main Rotating Cube */
+    .overallcube {
+        top: 65px;
+    }
+
+    .face {
+        width: 130px;
+        height: 130px;
+    }
+
+    .side {
+        width: 130px;
+        height: 130px;
+        gap: 7px;
+    }
+
+    /* Rotate 3D */
+    .top {
+        transform: rotateX(90deg) translateZ(65px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(65px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(65px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(65px);
+    }
+
+    .back {
+        transform: rotateX(-180deg) translateZ(65px);
+    }
+
+    .front {
+        transform: rotateX(0deg) translateZ(65px);
+    }
+
+    /* Bottom Cube */
+    .about .bottomcube {
+        bottom: 25px;
+        width: 65px;
+    }
+
+    /** Right Content **/
+    /* Name */
+    .goms {
+        font-size: 55px;
+        margin-top: 5px;
+    }
+
+    .goms span {
+        -webkit-text-stroke: 3px var(--color);
+    }
+
+    /* About Paragraph */
+    .about .about-para {
+        font-size: 18px;
+        line-height: 28px;
+        margin: 60px 20px 0px;
+        width: auto;
+    }
+
+    /* Opening Quote */
+    .about .about-para::before {
+        left: -20px;
+        top: -30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Closing Quote */
+    .about .about-para::after {
+        right: 5%;
+        bottom: -10px;
+        width: 30px;
+        height: 30px;
+    }
+
+/************************************* Mobile Skills Section *************************************/
+    .skills {
+        padding: 10px 20px 60px;
+    }
+
+    /* Skills Title */
+    .skills-title {
+        font-size: 30px;
+        padding-top: 30px;
+    }
+
+    /* Skills Boxes */
+    .overall-skills {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+        column-gap: 0px;
+        margin: 70px auto 0px;
+        width: 100%;
+    }
+
+    /* Individual Skill Box */
+    .skill-box {
+        width: 220px;
+        height: 356px;
+        margin: 0px auto;
+    }
+
+    .skill-button {
+        bottom: 25px;
+        padding: 7px 20px;
+        border-radius: 21px;
+        font-size: 20px;
+        gap: 7px;
+    }
+
+    .skill-button:hover {
+        font-size: 12px;
+    }
+/********************************************** Mobile Project Section ***************************************/
+    .project-sec {
+        padding: 10px 20px 30px;
+        min-height: auto;
+    }
+    .project-title {
+        font-size: 30px;
+        margin: 0 auto 40px;
+        padding-top: 20px;
+    }
+    .overall-project {
+        gap: 60px;
+    }
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .clip-position {
+        width: 260px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    .p1, .p2, .p3, .path-2 {
+        width: 260px;
+        height: 210px;
+        clip-path: path("M 15,0 L 245,0 A 15,15,0,0,1 260,15 L 260,150 A 15,15,0,0,1 245,165 L 15,210 A 15,15,0,0,1 0,195 L 0,15 A 15,15,0,0,1 15,0 Z");
+    }
+    .path-2 p {
+        font-size: 22px;
+    }
+    .project-info {
+        width: 100%;
+        padding: 0 5px;
+    }
+    .project-info h1 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+    .project-desc {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+    .project-link {
+        font-size: 14px;
+        padding: 5px 14px;
+        line-height: 26px;
+    }
+    /* .clip-position:hover .path-2 {
+        bottom: 35%;
+    } */
+    .clip-position:hover .p1,
+    .clip-position:hover .p2,
+    .clip-position:hover .p3 {
+        top: 20%;
+    }
+
+
+/********************************************* Mobile Education Section *****************************************/
+    .education {
+        height: auto;
+        padding: 30px 20px 80px;
+    }
+
+    /* Education Title */
+    .edu-title {
+        font-size: 30px;
+        margin: 0 auto 70px;
+    }
+
+    /* Education Circles */
+    .overall-edu {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 70px;
+        justify-items: center;
+    }
+
+    /* Individual Education */
+    .edu-circle {
+        width: 100%;
+    }
+
+    /* Circle */
+    .circle {
+        width: 176px;
+        height: 176px;
+        font-size: 40px;
+        margin: 0 auto;
+    }
+
+    .circle::before {
+        width: 125px;
+        height: 125px;
+    }
+
+    /* Education Name */
+    .edu-circle p {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+/******************************************* Mobile Contact Section *********************************/
+    .contact-section {
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+
+    /* Contact Title */
+    .contact-title {
+        font-size: 30px;
+        padding-top: 30px;
+        margin: 0 auto 50px;
+    }
+
+    /* Contact Boxes */
+    .overall-contact {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        margin-top: 50px;
+        padding: 0 20px;
+    }
+
+    /* Individual Contact Circle */
+    .individual-contact {
+        width: 230px;
+        height: 230px;
+        margin: 0 auto;
+    }
+
+    /* Inner Outline */
+    .outline {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* Social Media Icon */
+    .outline i {
+        top: 30px;
+        right: 55px;
+        font-size: 40px;
+    }
+
+    /* Hand Image */
+    .outline img {
+        bottom: 52px;
+        width: 82px;
+    }
+}
+
+/***************************************** Tablet Responsive ***************************************/
+@media only screen and (min-width:601px) and (max-width:900px) {
+/*********************** Navigation Bar ********************/
+    nav {
+        padding: 25px 50px;
+    }
+
+    nav p {
+        font-size: 35px;
+    }
+
+    nav span {
+        font-size: 35px;
+    }
+
+    /* Overall Anchor tag */
+    nav .anchor {
+        gap: 35px;
+    }
+
+    /* Menu bar */
+    label .menu {
+        font-size: 28px;
+    }
+/********************************Tab Home Section**********************************/
+    .home {
+        padding: 40px 50px;
+    }
+
+    /* Developer Name */
+    .txt .name {
+        font-size: 35px;
+    }
+
+    /* Role */
+    .txt .role {
+        font-size: 65px;
+        line-height: 65px;
+    }
+
+    /* Role Description */
+    .home .para {
+        font-size: 21px;
+        line-height: 34px;
+        margin-top: 25px;
+    }
+
+    /* My Image */
+    .myimage {
+        width: 260px;
+        height: 328px;
+        margin: 25px auto 0px;
+    }
+
+    /* Home Button */
+    .c-button {
+        margin-top: 30px;
+    }
+
+/********************************* Tab About Section ***********************************/
+    .about {
+        padding: 15px 50px;
+    }
+
+    /* About Title */
+    .about-title {
+        font-size: 40px;
+    }
+
+    /********* Cube Area *********/
+    .about-left {
+        height: 320px;
+    }
+
+    /*** Top Cube ***/
+    .about .topcube {
+        top: 70px;
+        left: 0px;
+        width: 80px;
+    }
+
+    /*** Middle Cube ***/
+    .overallcube {
+        top: 75px;
+    }
+
+    .face {
+        width: 160px;
+        height: 160px;
+    }
+
+    /* side for overall individual boxes */
+    .side {
+        width: 160px;
+        height: 160px;
+        gap: 8px;
+    }
+
+    /** Rotate 3D **/
+    .top {
+        transform: rotateX(90deg) translateZ(80px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(80px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(80px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(80px);
+    }
+
+    .back {
+        transform: rotateX(-180deg) translateZ(80px);
+    }
+
+    .front {
+        transform: rotateX(0deg) translateZ(80px);
+    }
+
+    /*** Bottom Cube ***/
+    .about .bottomcube {
+        bottom: 20px;
+        width: 80px;
+    }
+
+    /*********** Name Animation ***********/
+    .goms {
+        font-size: 65px;
+        margin-top: 10px;
+    }
+
+    .goms span {
+        -webkit-text-stroke: 4px var(--color);
+    }
+
+    /* About Paragraph */
+    .about .about-para {
+        font-size: 21px;
+        line-height: 34px;
+        margin: 60px 30px 0px;
+        max-width: 700px;
+    }
+
+    /* Open Quotation */
+    .about .about-para::before {
+        left: -25px;
+        top: -35px;
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Close Quotation */
+    .about .about-para::after {
+        right: 0px;
+        bottom: -15px;
+        width: 35px;
+        height: 35px;
+    }
+/******************************* Tab Skills Section ********************************/
+    .skills {
+        padding: 10px 50px 70px;
+    }
+
+    /* Skills Title */
+    .skills-title {
+        font-size: 40px;
+        padding-top: 40px;
+    }
+
+    /* Skills Boxes */
+    .overall-skills {
+        grid-template-columns: repeat(2, 2fr);
+        row-gap: 60px;
+        column-gap: 80px;
+        margin: 90px auto 0px;
+        width: 100%;
+    }
+
+    /* Individual Skill Box */
+    .skill-box {
+        width: 225px;
+        height: 356px;
+        margin: 0px auto;
+    }
+    .project-sec {
+        padding: 15px 40px 50px;
+    }
+    .project-title {
+        font-size: 40px;
+        margin: 0 auto 60px;
+    }
+    .overall-project {
+        gap: 70px;
+    }
+/***************************************** Tab Project section ******************************/
+    .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .clip-position {
+        width: 300px;
+        height: 320px;
+    }
+    .project-info {
+        width: 100%;
+        text-align: center;
+    }
+    .project-info h1 {
+        font-size: 28px;
+    }
+    .project-desc {
+        font-size: 19px;
+        line-height: 29px;
+        text-align: left;
+    }
+    .project-link {
+        font-size: 17px;
+    }
+
+/******************************** Tab Education section ********************************/
+    .education {
+        height: auto;
+        padding: 30px 50px 80px;
+    }
+
+    /* Education Title */
+    .edu-title {
+        font-size: 40px;
+        margin: 0 auto 90px;
+    }
+
+    .overall-edu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 80px;
+        column-gap: 40px;
+        justify-items: center;
+    }
+
+    /* Individual Education */
+    .edu-circle {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Third circle comes below */
+    .edu-circle:nth-child(3) {
+        grid-column: 1 / 3;
+    }
+
+    /* Circle */
+    .circle {
+        width: 190px;
+        height: 190px;
+        font-size: 45px;
+        margin: 0 auto;
+    }
+
+    .circle::before {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* Education Name */
+    .edu-circle p {
+        font-size: 35px;
+        margin-top: 55px;
+    }
+/**************************************Tab Contact Section *********************************/
+    .contact-section {
+        min-height: auto;
+        padding-bottom: 100px;
+    }
+
+    /* Contact Title */
+    .contact-title {
+        font-size: 40px;
+        padding-top: 40px;
+        margin: 0 auto 60px;
+    }
+
+    /* Contact Boxes */
+    .overall-contact {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px 40px;
+        margin-top: 60px;
+        padding: 0 20px;
+    }
+
+    /* Individual Contact Circle */
+    .individual-contact {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
+
+    /* Inner Outline */
+    .outline {
+        width: 195px;
+        height: 195px;
+    }
+
+    /* Social Media Icon */
+    .outline i {
+        top: 54px;
+        right: 65px;
+        font-size: 42px;
+    }
+
+    /* Hand Image */
+    .outline img {
+        bottom: 54px;
+        width: 85px;
+    }
+}
+/************************** 901px - 1200px Responsive ********************************/
+@media only screen and (min-width:901px) and (max-width:1200px) {
+
+/*************************************** Navigation Bar ***************************************/
+    nav {
+        padding: 30px 50px;
+    }
+
+    nav p {
+        font-size: 50px;
+    }
+
+    nav span {
+        font-size: 40px;
+    }
+
+    nav .anchor {
+        gap: 12px;
+        font-size: 20px;
+    }
+
+    .anchor a {
+        padding: 5px 8px;
+    }
+
+    .nav-btn button {
+        font-size: 21px;
+        padding: 8px 30px 0px;
+    }
+
+
+/*************************************** Home Section ***************************************/
+
+    .home {
+        padding: 0px 60px;
+        min-height: 100vh;
+    }
+
+    .txt .name {
+        font-size: 35px;
+    }
+
+    .txt .role {
+        font-size: 65px;
+    }
+
+    .home .para {
+        font-size: 21px;
+        line-height: 34px;
+        max-width: 500px;
+    }
+
+    .myimage {
+        top: 70px;
+        right: 30px;
+        width: 280px;
+        height: 355px;
+    }
+
+    .home .rotate {
+        display: none;
+    }
+
+
+/*************************************** About Section ***************************************/
+
+    .about {
+        padding: 10px 60px;
+    }
+
+    .about-title {
+        font-size: 45px;
+    }
+
+    .about-left {
+        width: 45%;
+        height: 80vh;
+    }
+
+    .about-right {
+        width: 55%;
+    }
+
+    /* Top Cube */
+    .about .topcube {
+        width: 80px;
+        left: 0px;
+    }
+
+    /* Main Cube */
+    .overallcube {
+        left: 15%;
+        top: 32%;
+    }
+
+    .face {
+        width: 160px;
+        height: 160px;
+    }
+
+    .side {
+        width: 160px;
+        height: 160px;
+        gap: 8px;
+    }
+
+    /* 3D Cube */
+    .top {
+        transform: rotateX(90deg) translateZ(80px);
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(80px);
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(80px);
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(80px);
+    }
+
+    .back {
+        transform: rotateX(-180deg) translateZ(80px);
+    }
+
+    .front {
+        transform: rotateX(0deg) translateZ(80px);
+    }
+
+    /* Bottom Cube */
+    .about .bottomcube {
+        width: 80px;
+        left: 35%;
+    }
+
+    /* Name */
+    .goms {
+        font-size: 65px;
+        margin-top: 50px;
+    }
+
+    .goms span {
+        -webkit-text-stroke: 4px var(--color);
+    }
+
+    /* About Paragraph */
+    .about .about-para {
+        font-size: 22px;
+        line-height: 35px;
+        max-width: 500px;
+        margin: 50px 0 30px 20px;
+    }
+
+    /* Opening Quote */
+    .about .about-para::before {
+        left: -40px;
+        top: -30px;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Closing Quote */
+    .about .about-para::after {
+        right: 20px;
+        bottom: -30px;
+        width: 40px;
+        height: 40px;
+    }
+
+
+/*************************************** Skills Section ***************************************/
+
+    .skills {
+        padding-bottom: 60px;
+    }
+
+    .skills-title {
+        font-size: 45px;
+        padding-top: 50px;
+    }
+
+    .overall-skills {
+        grid-template-columns: repeat(3, 210px);
+        column-gap: 70px;
+        row-gap: 60px;
+        margin: 100px auto 40px;
+    }
+
+    .skill-box {
+        width: 210px;
+        height: 330px;
+    }
+
+    .skill-box .skill-num {
+        font-size: 140px;
+    }
+
+    .skill-box:nth-child(1) .skill-num {
+    left: -49px;
+}
+
+.skill-box:nth-child(4) .skill-num {
+    left: -49px;
+}
+
+    .skill-button {
+        font-size: 21px;
+        padding: 7px 15px;
+    }
+    /************** Skill box 1 **************/
+.skill-box:nth-child(1) .hidebox {
+    left: -42px;
+    bottom: 109px;
+    height: 18px;
+    width: 59px;
+}
+
+.skill-box:nth-child(1) .dot {
+    left: -24px;
+    top: 134px;
+}
+
+/*************** Skill box 2 *************/
+.skill-box:nth-child(2) .hidebox {
+    left: -67px;
+    bottom: 113px;
+    height: 13px;
+    width: 67px;
+}
+
+.skill-box:nth-child(2) .dot {
+    left: -34px;
+    top: 134px;
+}
+
+/************* Skill box 3 **************/
+.skill-box:nth-child(3) .hidebox {
+    left: -25px;
+    bottom: 109px;
+    height: 9px;
+    width: 24px;
+}
+
+.skill-box:nth-child(3) .dot {
+    left: -31px;
+    top: 140px;
+}
+
+/*************** Skill box 4 **************/
+.skill-box:nth-child(4) .hidebox {
+    left: -8px;
+    bottom: 113px;
+    height: 4px;
+    width: 11px;
+}
+
+.skill-box:nth-child(4) .dot {
+    left: -3px;
+    top: 143px;
+}
+
+/***************** Skill box 5 **************/
+.skill-box:nth-child(5) .hidebox {
+    left: -32px;
+    bottom: 107px;
+    height: 14px;
+    width: 31px;
+}
+
+.skill-box:nth-child(5) .dot {
+    left: -35px;
+    top: 138px;
+}
+
+/****************** Skill box 6 ******************/
+.skill-box:nth-child(6) .hidebox {
+    left: -36px;
+    bottom: 107px;
+    height: 16px;
+    width: 35px;
+}
+
+.skill-box:nth-child(6) .dot {
+    left: -34px;
+    top: 136px;
+}
+
+/*************************************** Education Section ***************************************/
+
+    .education {
+        height: 100vh;
+        padding: 30px 50px 80px;
+    }
+
+    .edu-title {
+        font-size: 45px;
+        margin: 0 auto 100px;
+    }
+
+    .overall-edu {
+        gap: 30px;
+    }
+
+    .circle {
+        width: 190px;
+        height: 190px;
+        font-size: 45px;
+    }
+
+    .circle::before {
+        width: 140px;
+        height: 140px;
+    }
+
+    .edu-circle p {
+        font-size: 35px;
+        margin-top: 60px;
+    }
+
+
+/*************************************** Contact Section ***************************************/
+
+    .contact-section {
+        min-height: auto;
+        padding-bottom: 120px;
+    }
+
+    .contact-title {
+        font-size: 45px;
+        padding-top: 50px;
+        margin: 0 auto 60px;
+    }
+
+    .overall-contact {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px 30px;
+        margin-top: 60px;
+        padding: 0 50px;
+    }
+
+    .individual-contact {
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+    }
+
+    .outline {
+        width: 180px;
+        height: 180px;
+    }
+
+    .outline i {
+        top: 48px;
+        right: 58px;
+        font-size: 40px;
+    }
+
+    .outline img {
+        bottom: 50px;
+        width: 80px;
+    }
+
+}
