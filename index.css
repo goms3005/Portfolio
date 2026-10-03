@@ -1022,48 +1022,12 @@ nav .nav-btn {
     gap: 10px;
     padding: 5px 100px;
 }
+
 .projects{
     display: flex;
     align-items: center;
     gap:20%;
     /* justify-content: space-between; */
-}
-
-.p1{
-    position: relative;
-width: 300px;
-top:20%;
-    height: 250px;
-    background-color:white;
-    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
-}
-.p2{
-width: 300px;
-position: relative;
-    height: 250px;
-    top:20%;
-    background-color: white;
-    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
-}
-.p3{
-    width: 300px;
-    position: relative;
-    height: 250px;
-    top:20%;
-    background-color: white;
-    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
-}
-.path-2{
-    position: relative;
-     width: 300px;
-    height: 250px;
-    background-color:  #283349;
-    /* background: linear-gradient(169.98deg, #7397DF 90%, rgba(57, 60, 68, 0.015) 81.2%); */
-    bottom:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: path("M 20,0 L 280,0 A 20,20,0,0,1 300,20 L 300,180  A 20,20,0,0,1 290,200 L 20,250  A 20,20,0,0,1 0,230 L 0,20  A 20,20,0,0,1 20,0 Z");
 }
 
 .clip-position{
@@ -1072,43 +1036,67 @@ position: relative;
     height: 400px;
     
 }
+
 .clip-position:hover  .path-2{
    background-color:  #353F54;
-   bottom:70%;
-   transition: all 1s;
+   bottom:90%;
+   transition: all 2s;
 }
+
 .clip-position:hover  .p1{
    background-color: #353F54;
-   top:40%;
-    transition: all 1s;
-   
+   top:60%;
+   transition: all 1s;
 }
+
 .clip-position:hover  .p2{
    background-color: #353F54;
    top:50%;
     transition: all 1s;
 }
+
 .clip-position:hover  .p3{
    background-color: #353F54;
    top:50%;
     transition: all 1s;
    
 }
+.p1, .p2, .p3{
+    height: 240px;
+    width: 350px;
+    position: relative;
+    top:15%;
+    left: 10px;
+    transition: top 0.8s ease, background-color 0.8s ease;
+    background-color:white;
+    clip-path: path("M 20,0 L 330,0 A 20,20,0,0,1 350,20 L 350,170 A 20,20,0,0,1 340,190 L 20,240 A 20,20,0,0,1 0,220 L 0,20 A 20,20,0,0,1 20,0 Z");
+    
+}
+.path-2{
+    height: 240px;
+    width: 350px;
+    position: relative;
+    background-color:  #283349;
+    transition: bottom 0.8s ease, background-color 0.8s ease;
+    /* background: linear-gradient(169.98deg, rgba(53, 63, 84, 0.015) 27.98%, rgba(115, 151, 223, 0.015) 81.2%); */
+    bottom:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: path("M 20,0 L 330,0 A 20,20,0,0,1 350,20 L 350,170 A 20,20,0,0,1 340,190 L 20,240 A 20,20,0,0,1 0,220 L 0,20 A 20,20,0,0,1 20,0 Z");
+}
+ .p1 img, .p2 img, .p3 img{
+    height: 100%;
+    width: 100%;
+    /* border: 2px solid gray; */
+    /* object-fit: cover; */
+}
+
 .clip-position:hover .p1,
 .clip-position:hover .p2,
 .clip-position:hover .p3{
    top: 30%;
    background-color: #1a2e40;
-}
-.p1, .p2, .p3{
-    position: relative;
-    top: 20%;
-    transition: top 0.8s ease, background-color 0.8s ease;
-}
-.path-2{
-    bottom: 50%;
-        transition: bottom 0.8s ease, background-color 0.8s ease;
-        position: relative;
 }
 .path-2 p{
     color: white;
