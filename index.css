@@ -1016,18 +1016,18 @@ nav .nav-btn {
     padding-top: 50px;
 }
 
-.overall-projects{
+.overall-project{
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
-    padding: 5px 100px;
+    padding: 5px 40px;
 }
 
 .projects{
     display: flex;
     align-items: center;
     gap:20%;
-    /* justify-content: space-between; */
 }
 
 .clip-position{
@@ -1037,29 +1037,28 @@ nav .nav-btn {
     
 }
 
-.clip-position:hover  .path-2{
-   background-color:  #353F54;
-   bottom:90%;
-   transition: all 2s;
+.clip-position:hover .p1,
+.clip-position:hover .p2,
+.clip-position:hover .p3 {
+   background-color: #353F54;
+   animation: updown 3s ease-in-out;
 }
 
-.clip-position:hover  .p1{
+.clip-position:hover .path-2 {
    background-color: #353F54;
-   top:60%;
-   transition: all 1s;
+   animation: downup 3s ease-in-out;
 }
 
-.clip-position:hover  .p2{
-   background-color: #353F54;
-   top:50%;
-    transition: all 1s;
+@keyframes updown {
+   0% { top: 15%; }
+   50% { top: 45%; }
+   100% { top: 15%; }
 }
 
-.clip-position:hover  .p3{
-   background-color: #353F54;
-   top:50%;
-    transition: all 1s;
-   
+@keyframes downup {
+   0% { bottom: 50%; }
+   50% { bottom: 77%; }
+   100% { bottom: 50%; }
 }
 .p1, .p2, .p3{
     height: 240px;
@@ -1067,7 +1066,6 @@ nav .nav-btn {
     position: relative;
     top:15%;
     left: 10px;
-    transition: top 0.8s ease, background-color 0.8s ease;
     background-color:white;
     clip-path: path("M 20,0 L 330,0 A 20,20,0,0,1 350,20 L 350,170 A 20,20,0,0,1 340,190 L 20,240 A 20,20,0,0,1 0,220 L 0,20 A 20,20,0,0,1 20,0 Z");
     
@@ -1077,8 +1075,6 @@ nav .nav-btn {
     width: 350px;
     position: relative;
     background-color:  #283349;
-    transition: bottom 0.8s ease, background-color 0.8s ease;
-    /* background: linear-gradient(169.98deg, rgba(53, 63, 84, 0.015) 27.98%, rgba(115, 151, 223, 0.015) 81.2%); */
     bottom:50%;
     display: flex;
     align-items: center;
@@ -1092,12 +1088,6 @@ nav .nav-btn {
     /* object-fit: cover; */
 }
 
-.clip-position:hover .p1,
-.clip-position:hover .p2,
-.clip-position:hover .p3{
-   top: 30%;
-   background-color: #1a2e40;
-}
 .path-2 p{
     color: white;
     font-family: 'Poppins',sans-serif;
@@ -1458,65 +1448,96 @@ nav .nav-btn {
     .skill-button:hover {
         font-size: 12px;
     }
-/********************************************** Mobile Project Section ***************************************/
-    .project-sec {
-        padding: 10px 20px 30px;
-        min-height: auto;
-    }
-    .project-title {
-        font-size: 30px;
-        margin: 0 auto 40px;
-        padding-top: 20px;
-    }
-    .overall-project {
-        gap: 60px;
-    }
-    .projects {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .clip-position {
-        width: 260px;
-        height: 300px;
-        margin: 0 auto;
-    }
-    .p1, .p2, .p3, .path-2 {
-        width: 260px;
-        height: 210px;
-        clip-path: path("M 15,0 L 245,0 A 15,15,0,0,1 260,15 L 260,150 A 15,15,0,0,1 245,165 L 15,210 A 15,15,0,0,1 0,195 L 0,15 A 15,15,0,0,1 15,0 Z");
-    }
-    .path-2 p {
-        font-size: 22px;
-    }
-    .project-info {
-        width: 100%;
-        padding: 0 5px;
-    }
-    .project-info h1 {
-        font-size: 22px;
-        margin-bottom: 12px;
-        text-align: center;
-    }
-    .project-desc {
-        font-size: 16px;
-        line-height: 26px;
-        margin-bottom: 15px;
-    }
-    .project-link {
-        font-size: 14px;
-        padding: 5px 14px;
-        line-height: 26px;
-    }
-    /* .clip-position:hover .path-2 {
-        bottom: 35%;
-    } */
-    .clip-position:hover .p1,
-    .clip-position:hover .p2,
-    .clip-position:hover .p3 {
-        top: 20%;
-    }
 
+/* ==================== Mobile Responsive: 300px to 600px ==================== */
+
+.project-sec {
+    padding: 20px 15px 50px;
+}
+
+.project-title {
+    font-size: 35px;
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.overall-project {
+    padding: 0;
+    gap: 50px;
+    width: 100%;
+}
+
+.projects {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.clip-position {
+    width: 100%;
+    max-width: 350px;
+    height: 340px;
+}
+
+.p1,
+.p2,
+.p3 {
+    width: 234px;
+    height: 162px;
+    clip-path: path("M 13,0 L 221,0 A 13,13,0,0,1 234,13 L 234,114 A 13,13,0,0,1 226,128 L 13,162 A 13,13,0,0,1 0,149 L 0,13 A 13,13,0,0,1 13,0 Z");
+    /* top:0%;
+    left: 10px; */
+    top: 15%;
+    left: 12px;
+}
+
+.path-2 {
+    width: 234px;
+    height: 162px;
+    clip-path: path("M 13,0 L 221,0 A 13,13,0,0,1 234,13 L 234,114 A 13,13,0,0,1 226,128 L 13,162 A 13,13,0,0,1 0,149 L 0,13 A 13,13,0,0,1 13,0 Z");
+    bottom: 35%;
+    left: 5px;
+}
+
+.path-2 p {
+    font-size: 20px;
+}
+@keyframes updown {
+    0% { top: 15%; }
+    50% { top: 45%; }
+    100% { top: 15%; }
+}
+
+@keyframes downup {
+    0% { bottom: 50%; }
+    50% { bottom: 77%; }
+    100% { bottom: 50%; }
+}
+
+.project-info {
+    width: 100%;
+    padding: 0 5px;
+}
+
+.project-info h1 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.project-desc {
+    font-size: 17px;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    font-size: 15px;
+    padding: 5px 12px;
+    gap: 8px;
+    line-height: 25px;
+    max-width: 100%;
+}
 
 /********************************************* Mobile Education Section *****************************************/
     .education {
@@ -1808,31 +1829,7 @@ nav .nav-btn {
     .overall-project {
         gap: 70px;
     }
-/***************************************** Tab Project section ******************************/
-    .projects {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    .clip-position {
-        width: 300px;
-        height: 320px;
-    }
-    .project-info {
-        width: 100%;
-        text-align: center;
-    }
-    .project-info h1 {
-        font-size: 28px;
-    }
-    .project-desc {
-        font-size: 19px;
-        line-height: 29px;
-        text-align: left;
-    }
-    .project-link {
-        font-size: 17px;
-    }
+
 
 /******************************** Tab Education section ********************************/
     .education {
