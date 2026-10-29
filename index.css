@@ -1454,9 +1454,6 @@ nav .nav-btn {
 
 .project-sec {
     padding: 20px 15px 50px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 .project-title {
@@ -1468,50 +1465,38 @@ nav .nav-btn {
 .overall-project {
     padding: 0;
     gap: 50px;
-    width: 100%;
 }
 
 .projects {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    width: 100%;
 }
 
 .clip-position {
     width: 100%;
     max-width: 350px;
     height: 340px;
-    position: relative;
 }
 
 .p1,
 .p2,
-.p3 {
+.p3{
     width: 234px;
     height: 162px;
+    margin-left: 5px;
+    left: 50%;
+    transform: translateX(-50%);
     clip-path: path("M 13,0 L 221,0 A 13,13,0,0,1 234,13 L 234,114 A 13,13,0,0,1 226,128 L 13,162 A 13,13,0,0,1 0,149 L 0,13 A 13,13,0,0,1 13,0 Z");
-    /* top: 15%;
-    left: 12px; */
-    position: absolute;
-    /* top: 0;
-    left: 0;
-    right: 0; */
-    /* transition: all 0.5s ease; */
-    
 }
 
 .path-2 {
     width: 234px;
     height: 162px;
     clip-path: path("M 13,0 L 221,0 A 13,13,0,0,1 234,13 L 234,114 A 13,13,0,0,1 226,128 L 13,162 A 13,13,0,0,1 0,149 L 0,13 A 13,13,0,0,1 13,0 Z");
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 40%;
-    left: 5px;
-    position: absolute;
-    /* top: 0;
-    left: 0;
-    right: 0; */
-    /* transition: all 0.5s ease; */
+    
 }
 
 .path-2 p {
@@ -1524,14 +1509,15 @@ nav .nav-btn {
 }
 
 @keyframes downup {
-    0% { bottom: 50%; }
-    50% { bottom: 77%; }
-    100% { bottom: 50%; }
+    0% { bottom: 40%; }
+    50% { bottom: 60%; }
+    100% { bottom: 40%; }
 }
 
 .project-info {
     width: 100%;
     padding: 0 5px;
+    margin-top: 0px;
 }
 
 .project-info h1 {
