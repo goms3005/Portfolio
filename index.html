@@ -26,19 +26,19 @@
             <input id="check" type="checkbox" name="checkbox">
             <!-- Overall Anchor tag -->
             <div class="anchor">
-                <a href="">Home</a>
-                <a href="">About Me</a>
-                <a href="">Skills</a>
-                <a href="">Projects</a>
-                <a href="">Education</a>
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#project">Projects</a>
+                <a href="#education">Education</a>
             </div>
             <!-- Contact Button -->
             <div class="nav-btn">
-                <button>Contact</button>
+                <a href="#contact"><button>Contact</button></a>
             </div>
         </nav>
         <!------------------------------------ Home page ----------------------------------->
-        <section class="home">
+        <section class="home" id="home">
             <!-- Name and Role -->
             <div class="txt">
                 <p class="name">I am Gomathi</p>
@@ -58,14 +58,14 @@
             <img class="rotate" src="diamond-shape.png" alt="img not found">
         </section>
         <!-------------------------------------- About Page ----------------------------------->
-        <section class="about">
+        <section class="about" id="about">
             <!-- About Heading-->
             <p class="about-title">About</p>
             <!---------------- about content and cube image wrapper ----------------->
             <div class="about-wrapper">
                 <div class="about-left">
                     <!---------------- Cube 1 Top ------------->
-                    <img class="topcube" src="cube 1 top.png" alt="image not found">
+                    <img class="topcube" src="cube-1-top.png" alt="image not found">
                     <!----------------------- Overall Cube -------------------->
                     <div class="overallcube">
                         <div class="face">
@@ -144,7 +144,7 @@
                         </div>
                     </div>
                     <!-------------- Cube 3 Bottom --------------->
-                    <img class="bottomcube" src="cube 3 bottom.png" alt="image not found">
+                    <img class="bottomcube" src="cube-3-bottom.png" alt="image not found">
                 </div>
                 <div class="about-right">
                     <h1 class="goms">
@@ -161,7 +161,7 @@
             </div>
         </section>
         <!------------------------------------------ Skills --------------------------------------------->
-        <section class="skills">
+        <section class="skills" id="skills">
             <!-- Skills Heading -->
             <p class="skills-title">Skill</p>
             <div class="overall-skills">
@@ -195,7 +195,7 @@
                 <!-- Box 4 -->
                 <div class="skill-box">
                     <!-- react js image -->
-                    <img class="react" src="react js.png" alt="image not found">
+                    <img class="react" src="react-js.png" alt="image not found">
                     <h1 class="skill-num">4</h1>
                     <div class="hidebox"></div>
                     <div class="dot">.</div>
@@ -204,7 +204,7 @@
                 <!-- box 5 -->
                 <div class="skill-box">
                     <!-- node js image -->
-                    <img class="node" src="node js.png" alt="image not found">
+                    <img class="node" src="node-js.png" alt="image not found">
                     <h1 class="skill-num">5</h1>
                     <div class="hidebox"></div>
                     <div class="dot">.</div>
@@ -213,7 +213,7 @@
                 <!-- Box 6 -->
                 <div class="skill-box">
                     <!-- mongo image -->
-                    <img class="mongo" src="mongo db.png" alt="image not found">
+                    <img class="mongo" src="mongo-db.png" alt="image not found">
                     <h1 class="skill-num">6</h1>
                     <div class="hidebox"></div>
                     <div class="dot">.</div>
@@ -222,7 +222,7 @@
             </div>
         </section>
         <!-----------------------------------Project SEction  -------------------------------->
-        <section class="project-sec">
+        <section class="project-sec" id="project">
             <p class="project-title">Projects</p>
             <!-- Project 1 -->
             <div class="overall-project">
@@ -279,7 +279,7 @@
         </section>
 
         <!---------------------------------------Education section ------------------------------->
-        <section class="education">
+        <section class="education" id="education">
             <p class="edu-title">Education</p>
             <div class="overall-edu">
                 <div class="edu-circle">
@@ -297,7 +297,7 @@
             </div>
         </section>
         <!----------------------------------------- Contact Section ---------------------------------------->
-        <footer class="contact-section">
+        <footer class="contact-section" id="contact">
             <p class="contact-title">Contact</p>
             <div class="overall-contact">
                 <a class="individual-contact round1">
